@@ -23,6 +23,7 @@ $text-3 : #879597;
     box-sizing: border-box;
     font-size: 16px;
     font-family: "Calibre", sans-serif;
+    line-height: 150%;
 }
 
 header{
@@ -30,7 +31,9 @@ header{
         text-decoration: none;
     }
 
-    background-color: $bg-2;
+    //background-color: $header-bg;
+    background: rgba(235, 237, 238, 0.75);
+    backdrop-filter: blur(5px);
     z-index: 1;
     position: fixed;
     top: 0px;
@@ -46,8 +49,12 @@ header{
     }
 
     .header-logo{
-        display: inline-block;
-        width: 2rem;
+        img{
+            max-width: 2rem;
+            @media (min-width:40rem){
+                max-width: 5rem;
+            }
+        }
     }
 
     a.header-link{
@@ -80,7 +87,7 @@ div.container{
         grid-column-end: -1;
 
         @media (min-width:40rem){
-            margin-top: 5rem;
+            margin-top: 4rem;
             grid-column-start: 3;
             grid-column-end: 8;
             font-size: 2rem;
@@ -96,7 +103,7 @@ div.container{
         text-align: justify;
 
         @media (min-width:40rem){
-            margin-top: 2.5rem;
+            margin-top: 1.5rem;
             font-size: 1.25rem;
             grid-column-start: 3;
             grid-column-end: 9;
@@ -141,6 +148,53 @@ div.container{
         }
     }
 
+    div.projects-container{
+        margin-top: 2.5rem;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (min-width:40rem){
+            grid-column-start: 3;
+            grid-column-end: 11;
+        }
+
+        a.project-card{
+            border-radius: 0.5rem;
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+            background-color: $bg-2;
+            margin-bottom: 1rem;
+            @media (min-width:40rem){
+                width: 48%;
+            }
+
+            img {
+                border-radius: 0.5rem;
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+
+            h3{
+                margin-top: 1rem;
+                margin-left: 1rem;
+                font-family: 'Halant';
+                font-size: 1.125rem;
+                color: $red;
+            }
+
+            p{
+                margin: 1rem;
+                color: $text-2;
+
+            }
+        }
+    }
 
 
 }
