@@ -1,0 +1,97 @@
+$blue : #0461B1;
+$red : #B1365B;
+$header-bg : hsla(200,8,93,0.95);
+$bg-1 : #EBEBEB;
+$bg-2 : #F7F6F2;
+$grey-1 : #273739;
+$grey-2 : #4B6062;
+$grey-3 : #738385;
+$grey-4 : #9BA7A8;
+$grey-5 : #AFB8B9;
+$grey-6 : #C3CACB;
+$grey-7 : #D7DCDC;
+$text-1 : #374E51;
+$text-2 : #5F7174;
+$text-3 : #879597;
+
+@import url("./font/stylesheet.css");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Spartan:wght@900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+header{
+    a {
+        text-decoration: none;
+    }
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: $header-bg;
+    height: 5rem;
+
+    @media (min-width:40rem) {
+        flex-direction: row;
+        padding: 0 8rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a.header-title {
+        color: $blue;
+        font-weight: 700;
+        letter-spacing: -1.5%;
+
+        @media (min-width:40rem){
+            font-size: 1.25rem;
+        }
+    }
+
+    a.header-link {
+        padding-right: 1rem;
+        color: $text-2;
+        font-weight: 400;
+        &:hover {
+            color: $blue;
+        }
+        @media (min-width:40rem){
+            font-size: 1.25rem;
+            padding-right: 0;
+            padding-left: 2.5rem;
+        }
+    }
+}
+
+
+div.intro{
+    margin-top: 6.5rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+
+    h3.intro-text{
+        width: 65%;
+        margin: 0;
+        margin: auto;
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: $text-1;
+        line-height: 150%;
+    }
+}
+
+
+
+
+
