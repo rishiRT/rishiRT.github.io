@@ -75,19 +75,31 @@ header{
 }
 
 
-div.intro{
-    margin-top: 6.5rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
+div.main{
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 0.5rem;
+
+    @media (min-width:40rem){
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
 
     h3.intro-text{
-        width: 65%;
-        margin: 0;
-        margin: auto;
-        font-size: 1.125rem;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        margin-top: 2rem;
         font-weight: 400;
-        color: $text-1;
         line-height: 150%;
+        color: $text-2;
+
+        @media (min-width:40rem){
+            grid-column-start: 2;
+            grid-column-end: 9;
+        }
     }
 }
 
