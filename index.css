@@ -1,71 +1,101 @@
 @import url("./font/stylesheet.css");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Spartan:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Halant:wght@700&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "IBM Plex Sans", sans-serif; }
+  font-family: "Calibre", sans-serif; }
 
 header {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  justify-content: space-between;
+  background-color: #F7F6F2;
+  z-index: 1;
   position: fixed;
   top: 0px;
-  left: 0px;
-  z-index: 1;
-  background-color: rgba(236, 238, 239, 0.95);
-  height: 5rem; }
+  height: 5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; }
   header a {
     text-decoration: none; }
   @media (min-width: 40rem) {
     header {
-      flex-direction: row;
-      padding: 0 8rem;
-      align-items: center;
-      justify-content: space-between; } }
-  header a.header-title {
-    color: #0461B1;
-    font-weight: 700;
-    letter-spacing: -1.5%; }
-    @media (min-width: 40rem) {
-      header a.header-title {
-        font-size: 1.25rem; } }
+      padding: 0 8rem; } }
+  header .header-logo {
+    display: inline-block;
+    width: 2rem; }
   header a.header-link {
-    padding-right: 1rem;
     color: #5F7174;
-    font-weight: 400; }
-    header a.header-link:hover {
-      color: #0461B1; }
+    padding-left: 1.5rem; }
     @media (min-width: 40rem) {
       header a.header-link {
-        font-size: 1.25rem;
-        padding-right: 0;
-        padding-left: 2.5rem; } }
+        padding-left: 2.5rem;
+        font-size: 1.125rem; } }
+    header a.header-link:hover {
+      color: #427EF3; }
 
-div.main {
+div.container {
+  margin: 0 1rem;
   margin-top: 5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 0.5rem; }
-  @media (min-width: 40rem) {
-    div.main {
-      margin-left: 8rem;
-      margin-right: 8rem; } }
-  div.main h3.intro-text {
+  grid-column-gap: 1rem; }
+  div.container h3.intro-heading {
+    display: block;
+    margin-top: 2.5rem;
+    font-family: 'Halant';
+    font-size: 1.25rem;
+    color: #427EF3;
+    grid-column-start: 1;
+    grid-column-end: -1; }
+    @media (min-width: 40rem) {
+      div.container h3.intro-heading {
+        margin-top: 5rem;
+        grid-column-start: 3;
+        grid-column-end: 8;
+        font-size: 2rem; } }
+  div.container p.intro-body {
+    margin-top: 1.25rem;
     grid-column-start: 1;
     grid-column-end: -1;
-    margin-top: 2rem;
-    font-weight: 400;
+    color: #374E51;
     line-height: 150%;
-    color: #5F7174; }
+    text-align: justify; }
     @media (min-width: 40rem) {
-      div.main h3.intro-text {
-        grid-column-start: 2;
+      div.container p.intro-body {
+        margin-top: 2.5rem;
+        font-size: 1.25rem;
+        grid-column-start: 3;
         grid-column-end: 9; } }
+    div.container p.intro-body span {
+      font-size: 1rem;
+      color: #B1365B;
+      text-decoration: none; }
+      @media (min-width: 40rem) {
+        div.container p.intro-body span {
+          font-size: 1.25rem; } }
+    div.container p.intro-body a {
+      font-size: 1rem;
+      color: #427EF3;
+      text-decoration: none; }
+      @media (min-width: 40rem) {
+        div.container p.intro-body a {
+          font-size: 1.25rem; } }
+  div.container h3.projects-heading {
+    display: block;
+    margin-top: 1.25rem;
+    font-family: 'Halant';
+    font-size: 1.25rem;
+    color: #427EF3;
+    grid-column-start: 1;
+    grid-column-end: -1; }
+    @media (min-width: 40rem) {
+      div.container h3.projects-heading {
+        margin-top: 2.5rem;
+        grid-column-start: 3;
+        grid-column-end: 8;
+        font-size: 1.5rem; } }
 
 /*# sourceMappingURL=index.css.map */
