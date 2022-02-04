@@ -203,6 +203,20 @@ div.container{
                 color: $text-2;
 
             }
+
+            div.tags{
+                display: flex;
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+                p{
+                    margin: 0;
+                    margin-right: 1rem;
+                    color: #471624;
+                    padding: 0.25rem 0.4rem;
+                    background-color: #e8c3ce;
+                    border-radius: 0.25rem;
+                }
+            }
         }
     }
 
