@@ -1,6 +1,6 @@
 $blue : #427EF3;
 $red : #B1365B;
-$header-bg : hsla(200,8,93,0.95);
+$header-bg : #ffffff;
 $bg-1 : #EBEBEB;
 $bg-2 : #F7F6F2;
 $grey-1 : #273739;
@@ -13,6 +13,15 @@ $grey-7 : #D7DCDC;
 $text-1 : #374E51;
 $text-2 : #5F7174;
 $text-3 : #879597;
+
+$size-1 : 1rem;
+$size-2 : 1.125rem;
+$size-3 : 1.25rem;
+$size-4 : 1.5rem;
+$size-5 : 2rem;
+$size-6 : 4rem;
+$size-7 : 5rem;
+
 
 @import url("./font/stylesheet.css");
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,700&family=Spartan:wght@900&display=swap');
@@ -32,8 +41,7 @@ header{
     }
 
     //background-color: $header-bg;
-    background: rgba(235, 237, 238, 0.75);
-    backdrop-filter: blur(5px);
+    background: $header-bg;
     z-index: 1;
     position: fixed;
     top: 0px;
@@ -79,23 +87,23 @@ div.container{
 
     h3.intro-heading{
         display: block;
-        margin-top: 2.5rem;
+        margin-top: $size-5;
         font-family: 'Halant';
-        font-size: 1.25rem;
+        font-size: $size-3;
         color: $blue;
         grid-column-start: 1;
         grid-column-end: -1;
 
         @media (min-width:40rem){
-            margin-top: 4rem;
+            margin-top: $size-7;
             grid-column-start: 3;
             grid-column-end: 8;
-            font-size: 2rem;
+            font-size: $size-5;
         }
     }
 
     p.intro-body{
-        margin-top: 1.25rem;
+        margin-top: $size-3;
         grid-column-start: 1;
         grid-column-end: -1;
         color: $text-1;
@@ -103,29 +111,27 @@ div.container{
         text-align: justify;
 
         @media (min-width:40rem){
-            margin-top: 1.5rem;
-            font-size: 1.25rem;
+            margin-top: $size-5;
+            font-size: $size-3;
             grid-column-start: 3;
             grid-column-end: 9;
         }
 
         span {
-            font-size: 1rem;
             color: $red;
             text-decoration: none;
 
             @media (min-width : 40rem) {
-                font-size: 1.25rem;
+                font-size: $size-3;
             }
         }
 
         a {
-            font-size: 1rem;
             color: $blue;
             text-decoration: none;
 
             @media (min-width : 40rem) {
-                font-size: 1.25rem;
+                font-size: $size-3;
             }
 
         }
@@ -133,23 +139,23 @@ div.container{
 
     h3.projects-heading{
         display: block;
-        margin-top: 1.25rem;
+        margin-top: $size-5;
         font-family: 'Halant';
-        font-size: 1.25rem;
+        font-size: $size-3;
         color: $blue;
         grid-column-start: 1;
         grid-column-end: -1;
 
         @media (min-width:40rem){
-            margin-top: 2.5rem;
+            margin-top: $size-7;
             grid-column-start: 3;
             grid-column-end: 8;
-            font-size: 1.5rem;
+            font-size: $size-4;
         }
     }
 
     div.projects-container{
-        margin-top: 2.5rem;
+        margin-top: $size-5;
         grid-column-start: 1;
         grid-column-end: -1;
         display: flex;
@@ -168,9 +174,10 @@ div.container{
             text-decoration: none;
             box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
             background-color: $bg-2;
-            margin-bottom: 1rem;
+            margin-bottom: $size-5;
             @media (min-width:40rem){
                 width: 48%;
+                margin-bottom: $size-6;
             }
 
             img {
@@ -184,8 +191,11 @@ div.container{
                 margin-top: 1rem;
                 margin-left: 1rem;
                 font-family: 'Halant';
-                font-size: 1.125rem;
+                font-size: $size-2;
                 color: $red;
+                @media (min-width:40rem){
+                    font-size: $size-3;
+                }
             }
 
             p{
