@@ -1,0 +1,63 @@
+@import url("/assets/font/stylesheet.css");
+@import url("https://use.typekit.net/wne5cqv.css");
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+@import 'variables';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: questa-sans, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 150%;
+
+}
+
+header{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-column-gap: 1rem;
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+    nav{
+        a{
+            text-decoration: none;
+        }
+
+        margin: 0 1rem;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (min-width:40rem){
+            margin: 0;
+            grid-column-start: 2;
+            grid-column-end: 12;
+        }
+
+        div.header-links{
+            a.header-link{
+                padding-left: 1.25rem;
+
+                @media (min-width:40rem){
+                    padding-left: 2.5rem;
+                    font-size: 1.25rem;
+                    color: $medium-grey;
+                }
+            }
+        }
+    }
+}
+
+.header-bg{
+    background: rgba(248, 249, 250, 0.9);
+    backdrop-filter: blur(16px);
+}
+
+

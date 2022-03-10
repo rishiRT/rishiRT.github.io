@@ -1,8 +1,6 @@
 $blue : #427EF3;
 $red : #B1365B;
 $header-bg : #ffffff;
-$bg-1 : #EBEBEB;
-$bg-2 : #F7F6F2;
 $grey-1 : #273739;
 $grey-2 : #4B6062;
 $grey-3 : #738385;
@@ -35,13 +33,16 @@ $size-7 : 5rem;
     line-height: 150%;
 }
 
+body{
+    background-color: #f3f4f6;
+}
+
 header{
     a{
         text-decoration: none;
     }
-
-    //background-color: $header-bg;
-    background: $header-bg;
+    
+    background-color: $header-bg;
     z-index: 1;
     position: fixed;
     top: 0px;
@@ -173,7 +174,7 @@ div.container{
             display: block;
             text-decoration: none;
             box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
-            background-color: $bg-2;
+            background-color: $header-bg;
             margin-bottom: $size-5;
             @media (min-width:40rem){
                 width: 48%;
@@ -181,7 +182,8 @@ div.container{
             }
 
             img {
-                border-radius: 0.5rem;
+                border-top-left-radius: 0.5rem;
+                border-top-right-radius: 0.5rem;
                 width: 100%;
                 display: block;
                 margin: auto;
